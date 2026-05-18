@@ -7,6 +7,20 @@ En esta aplicación también se usaron varias tecnologías para que la interfaz 
 Para ejecutar esta aplicación en los navegadores se hizo uso del siguiente enlace: http://localhost/sistema_usuarios/logueo.php
 1_ Para poder probar la aplicación primero se instalo el "XAMPP", se lo ejecuta y se inicia los servidores de apache y MySQL. 
 2_ Usamos "phpmyandim" para crear la base de datos
+
+-Creamos una nueva base de datos con el nombre 
+"sistema_usuarios"
+
+-Creamos una tabla con el siguiente código:
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    cedula VARCHAR(10) UNIQUE NOT NULL,
+    nombre VARCHAR(100) NOT NULL,
+    correo VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 3_ Intalamos "Visual Studio Code" para poder crear y modificar el código fuente.
 
 
